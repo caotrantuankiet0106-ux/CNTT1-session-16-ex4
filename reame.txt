@@ -1,0 +1,20 @@
+# BÁO CÁO: TỐI ƯU HÓA LƯU TRỮ DỮ LIỆU CAMPUS (FILES ON-DEMAND)
+
+## 1. Giải pháp kỹ thuật (Files On-Demand)
+* **Cơ chế:** Cho phép hiển thị toàn bộ 500GB video trên File Explorer/Finder nhưng chỉ lưu trữ cục bộ dưới dạng metadata (chiếm 0 KB trên SSD cho đến khi mở file).
+* **Cách thiết lập:** 
+  1. Mở Cài đặt ứng dụng Cloud $\rightarrow$ Chọn **Sync and backup** $\rightarrow$ Bật **Files On-Demand**.
+  2. Click chuột phải vào thư mục dữ liệu $\rightarrow$ Chọn **Free up space** (chuyển toàn bộ về trạng thái *Online-only*).
+
+## 2. Giải quyết bẫy dữ liệu (Băng thông & Gập máy)
+* **Băng thông mạng trọ:** Giới hạn tốc độ tải lên (*Upload Rate*) ở mức 30–50% tổng băng thông (khoảng 3–5 MB/s).
+* **Chống đứt đoạn khi gập máy:** Vào *Power & Sleep settings* $\rightarrow$ Đặt chế độ Sleep khi cắm sạc thành **Never** và chọn **Do nothing** khi đóng nắp máy (*Close the lid*).
+* **Đồng bộ chia nhỏ:** Chia 500GB thành các thư mục nhỏ (~20-50GB) và tải lên vào khung giờ thấp điểm (0h - 6h sáng).
+
+## 3. Báo cáo dung lượng & Hiệu quả
+* **Thông số:** SSD khả dụng $\approx 180$ GB, tổng dung lượng Cloud $= 500$ GB.
+* **Đối chiếu:**
+  * *Đồng bộ thông thường:* Chiếm 500GB $\rightarrow$ **Tràn SSD 256GB**, treo hệ thống.
+  * *Files On-Demand:* Chiếm 0GB khi không sử dụng $\rightarrow$ **Trống 180GB**, vận hành mượt mà.
+* **Công thức tính hiệu quả:**
+  $$\text{Hiệu quả tối ưu} = \left(\frac{V_{\text{Cloud}} - V_{\text{Active Local}}}{V_{\text{Cloud}}}\right) \times 100\% = \left(\frac{500 - 4}{500}\right) \times 100\% = 99.2\%$$
